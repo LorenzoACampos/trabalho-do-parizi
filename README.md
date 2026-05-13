@@ -1,58 +1,81 @@
-#  Entrevista com a Coordenação (Levantamento de Requisitos)
+#  Resultados da Entrevista com a Coordenação
+
+
+
+
 
 <details>
   <summary><b>1. Experiência Prática e Casos de Risco</b></summary>
 
-  **Pergunta:** Professor, poderia citar um caso recente onde percebeu um risco de evasão em um aluno? O que levou a pensar isso e como fez para tentar resolver?
+  **Pergunta:** Me diga um caso recente que você percebeu um risco de evasão em um aluno. O que levou a pensar nisso e como fez para tentar resolver?
   
-  * **Objetivo:** Entender o gatilho emocional e comportamental que não está nos dados frios.
+  **Objetivo:** Entender o gatilho emocional e comportamental que não está nos dados frios.
+
+  **Resposta:** O sinal mais claro é a **ausência em avaliações**. O processo atual é informal: tenta-se contato por mensagem ou conversas entre professores para checar se o aluno parou de frequentar as outras disciplinas também.
 </details>
 
 <details>
   <summary><b>2. Sinais de Alerta (Faro do Coordenador)</b></summary>
 
-  **Pergunta:** Na sua experiência, quais são os principais sinais de que um aluno vai evadir? Aqueles que, quando você "bate o olho", já sabe que o aluno está em risco?
+  **Pergunta:** Na sua experiência, quais são os principais sinais de que um aluno vai evadir? Aqueles que quando você "bate o olho" já sabe?
   
-  * **Objetivo:** Validar quais indicadores (faltas, notas, comportamento) devem ter maior peso nos alertas do sistema.
+  **Objetivo:** Validar quais indicadores (faltas, notas, comportamento) devem ter maior peso nos alertas do sistema.
+
+  **Resposta:** O principal indicador são **duas semanas consecutivas de falta**. Em disciplinas de um encontro semanal, isso significa 15 dias longe da aula, o que representa um risco crítico de desconexão com o curso.
 </details>
 
 <details>
   <summary><b>3. Processo de Intervenção Atual</b></summary>
 
-  **Pergunta:** Hoje, ao identificar um risco, qual é o processo de intervenção? Com quem se fala (professores, aluno)? Em quanto tempo? É feito algum registro oficial?
+  **Pergunta:** Hoje, ao identificar um risco, qual é o processo de intervenção? Com quem se fala? É feito algum registro?
   
-  * **Objetivo:** Mapear o fluxo de trabalho atual para que o sistema possa automatizar ou facilitar essas etapas.
+  **Objetivo:** Mapear o fluxo de trabalho atual para que o sistema possa automatizar ou facilitar essas etapas.
+
+  **Resposta:** Não há registro oficial. A intervenção baseia-se em conversas entre docentes para entender se a desistência é em apenas uma matéria (comum na graduação) ou se é um abandono total do curso.
 </details>
 
 <details>
   <summary><b>4. Funcionalidade Essencial (Dashboard Diário)</b></summary>
 
-  **Pergunta:** Se existisse uma plataforma para ajudar a identificar a evasão, qual seria a funcionalidade que você abriria toda manhã? Qual informação ou visão não pode faltar?
+  **Pergunta:** Se existisse uma plataforma, qual seria a funcionalidade que você abriria toda manhã? Qual informação não pode faltar?
   
-  * **Objetivo:** Definir o "MVP" (Mínimo Produto Viável) e a tela principal do Coordenador.
+  **Objetivo:** Definir o "MVP" (Mínimo Produto Viável) e a tela principal do Coordenador.
+
+  **Resposta:** Um **alerta automático por e-mail** baseado no "número mágico" de 2 semanas de falta. É necessário um **dashboard centralizado**, pois hoje os dados no SIGA são dispersos e difíceis de visualizar de forma estruturada.
 </details>
 
 <details>
-  <summary><b>5. Riscos, Segurança e Privacidade</b></summary>
+  <summary><b>5. Riscos e Atualização de Dados</b></summary>
 
-  **Pergunta:** O que você acha que poderia dar errado nessa plataforma? O que te preocupa em ter tantos dados reunidos? Quais deveriam ser as principais medidas de segurança?
+  **Pergunta:** O que te preocupa em ter tantos dados reunidos? O que poderia dar errado?
   
-  * **Objetivo:** Levantar Requisitos Não Funcionais (RNFs) focados em LGPD e integridade de dados.
+  **Objetivo:** Identificar gargalos técnicos e operacionais que podem invalidar a utilidade da ferramenta.
+
+  **Resposta:** A **taxa de atualização**. Como não há acesso via API ao SIGA, o risco é o dado ficar defasado. O ideal seria que os professores subissem os diários de classe semanalmente para garantir dados reais.
 </details>
 
 <details>
-  <summary><b>6. Agilidade e Relatórios</b></summary>
+  <summary><b>6. Segurança e Privacidade (LGPD)</b></summary>
 
-  **Pergunta:** Se eu pedisse um relatório completo da situação de risco da sua turma agora, em quanto tempo conseguiria entregar e o que esse processo exigiria de você hoje?
+  **Pergunta:** Quais deveriam ser as principais medidas de segurança e privacidade da plataforma?
   
-  * **Objetivo:** Medir o ganho de produtividade que a plataforma trará em comparação ao processo manual atual.
+  **Objetivo:** Levantar Requisitos Não Funcionais (RNFs) focados em proteção de dados e permissões de perfil.
+
+  **Resposta:** Restrição de visibilidade. Um professor **não deve ver detalhes** de ausências em outras disciplinas. O acesso detalhado deve ser restrito ao professor da matéria e ao coordenador (este com visão geral).
+</details>
+
+<details>
+  <summary><b>7. Agilidade e Relatórios</b></summary>
+
+  **Pergunta:** Se eu te pedisse um relatório completo da situação de risco agora, quanto tempo levaria e o que isso exigiria de você?
+  
+  **Objetivo:** Medir o ganho de produtividade que a plataforma trará em comparação ao processo manual atual.
+
+  **Resposta:** Levaria muito tempo e trabalho manual. Seria necessário baixar dezenas de PDFs, cruzar listas de alunos manualmente e montar uma matriz do zero. Hoje, as informações não estão consolidadas.
 </details>
 
 ---
-*Este roteiro serviu de base para a elaboração dos Requisitos Funcionais do projeto.*
-
-
-
+*Dados coletados para fundamentar a elaboração dos Requisitos Funcionais e de Interface do projeto.*
 # Perguntas do Questionário
 
 <details>
@@ -122,10 +145,10 @@ Clique abaixo para visualizar os gráficos do questionário:
   <summary><b>Visualizar Gráficos (Perguntas 1 a 5)</b></summary>
 
   #### Pergunta 1
-  ![Gráfico 1]<img width="2196" height="996" alt="grafico_Pergunta_1" src="https://github.com/user-attachments/assets/36cbfcdd-49fd-4b88-82ad-2b52e74afc08" />
+  [Gráfico 1]<img width="2196" height="996" alt="grafico_Pergunta_1" src="https://github.com/user-attachments/assets/36cbfcdd-49fd-4b88-82ad-2b52e74afc08" />
 
   #### Pergunta 2
-  ![Gráfico 2]<img width="2196" height="924" alt="grafico_Pergunta_2" src="https://github.com/user-attachments/assets/afad2135-7893-43e7-872f-aa6bad243c8b" />
+  [Gráfico 2]<img width="2196" height="924" alt="grafico_Pergunta_2" src="https://github.com/user-attachments/assets/afad2135-7893-43e7-872f-aa6bad243c8b" />
   
 
   #### Pergunta 3

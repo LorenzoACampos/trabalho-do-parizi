@@ -1,6 +1,16 @@
+# **Respostas do Questionário**
+
+<img width="2196" height="996" alt="grafico_Pergunta_1" src="https://github.com/user-attachments/assets/36cbfcdd-49fd-4b88-82ad-2b52e74afc08" />
+<img width="2196" height="996" alt="grafico_Pergunta_3" src="https://github.com/user-attachments/assets/49ebb260-8d47-45b3-9ee7-ea73694bf5d6" />
+<img width="2196" height="924" alt="grafico_Pergunta_2" src="https://github.com/user-attachments/assets/afad2135-7893-43e7-872f-aa6bad243c8b" />
+
+<img width="2196" height="996" alt="grafico_Pergunta_4" src="https://github.com/user-attachments/assets/584b76d1-af3f-4ea9-b3b1-c2849601862e" />
+
+<img width="2196" height="924" alt="grafico_Pergunta_5" src="https://github.com/user-attachments/assets/bdb6745c-ef10-4ac9-a6e6-a5efa93d4821" />
+
+
 # **Requisitos Funcionais e Não Funcionais**
 
----
 
 # **Requisitos Funcionais**
 

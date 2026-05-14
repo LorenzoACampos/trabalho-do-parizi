@@ -1,9 +1,6 @@
+## Trabalho da plataforma SaveStudent
+
 #  Resultados da Entrevista com a Coordenação
-
-
-
-
-
 <details>
   <summary><b>1. Experiência Prática e Casos de Risco</b></summary>
 

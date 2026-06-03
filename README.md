@@ -756,9 +756,11 @@ E a atualização deve ocorrer sem necessidade de recarregar a página
 
 </details>
 
+
+</details>
 # Validação das User Stories com INVEST
 
-As User Stories da plataforma **SaveStudent** foram avaliadas utilizando o modelo **INVEST** (*Independent, Negotiable, Valuable, Estimable, Small e Testable*), garantindo que cada história seja adequada para implementação e validação durante o desenvolvimento.
+
 
 | Critério | US01 | US02 | US03 | US04 | US05 |
 |-----------|-----------|-----------|-----------|-----------|-----------|
@@ -769,3 +771,5 @@ As User Stories da plataforma **SaveStudent** foram avaliadas utilizando o model
 | **S — Small** | Foca em um único comportamento de disparo. | Trata exclusivamente o alerta de 85%. | Trata exclusivamente o alerta de 75%. | Foca exclusivamente na listagem base. | Foca exclusivamente nos filtros. |
 | **T — Testable** | Testável por auditoria de logs (0 falsos negativos). | Testável por registro de notificações enviadas ao atingir 85%. | Testável por registro de notificações enviadas ao atingir 75%. | Testável por inspeção da interface utilizando dados de teste. | Testável aplicando filtros de forma isolada e combinada. |
 
+
+</details>

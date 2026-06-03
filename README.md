@@ -449,10 +449,6 @@ Esta seção descreve as premissas técnicas, de segurança e de performance do 
 
 # User Stories
 
-Esta seção apresenta as User Stories identificadas para a plataforma **SaveStudent**. Cada história foi estruturada utilizando o modelo **3C (Card, Conversation e Confirmation)**, permitindo a descrição dos requisitos funcionais de forma clara e orientada às necessidades dos usuários do sistema.
-
----
-
 <details>
 <summary><strong>US01 — Alerta Automático de Ausências Consecutivas (RF01)</strong></summary>
 

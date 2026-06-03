@@ -446,4 +446,100 @@ Esta seção descreve as premissas técnicas, de segurança e de performance do 
 </details>
 
 ---
+
+<details>
+<summary><strong>US02 — Alerta Preventivo de Frequência (RF09)</strong></summary>
+
+## Card
+
+Como aluno, eu quero receber uma notificação automática quando minha frequência em uma disciplina cair abaixo de 85%, para que eu possa me organizar a tempo de evitar chegar ao limite mínimo de aprovação.
+
+## Conversation
+
+| Regra | Descrição |
+|---------|---------|
+| R1 | O alerta é disparado exclusivamente quando a frequência cai abaixo de 85%. |
+| R2 | O aluno recebe o alerta no e-mail institucional cadastrado. |
+| R3 | O limiar de 85% é configurável pelo coordenador via RF08. |
+| R4 | Este alerta é independente do alerta crítico de 75%, tratado na US03. |
+
+## Confirmation
+
+- Quando a frequência do aluno em qualquer disciplina cair abaixo de 85%, o aluno recebe uma notificação preventiva identificando a disciplina e o percentual atual.
+- A notificação informa que o limite mínimo para aprovação é 75%.
+- Nenhum aluno que cruzar o limiar de 85% deixa de receber a notificação, sendo possível verificar por auditoria de logs.
+
+</details>
+
+<details>
+<summary><strong>US03 — Alerta Crítico de Frequência (RF09)</strong></summary>
+
+## Card
+
+Como aluno, eu quero receber uma notificação automática quando minha frequência em uma disciplina cruzar o limite de 75%, para que eu saiba que estou em risco de reprovação direta por falta e o coordenador possa intervir.
+
+## Conversation
+
+| Regra | Descrição |
+|---------|---------|
+| R1 | O alerta é disparado exclusivamente quando a frequência cruza o limite de 75%. |
+| R2 | Além do aluno, o coordenador também é notificado automaticamente. |
+| R3 | O limiar de 75% é configurável pelo coordenador via RF08. |
+| R4 | Este alerta é independente do alerta preventivo de 85%, tratado na US02. |
+
+## Confirmation
+
+- Quando a frequência do aluno cruzar o limite de 75%, o aluno recebe uma notificação crítica informando o risco de reprovação por falta.
+- O coordenador é notificado simultaneamente ao aluno, sem necessidade de ação manual.
+- O conteúdo da notificação crítica é textualmente distinto do alerta preventivo da US02.
+- Nenhum aluno que cruzar o limiar de 75% deixa de receber a notificação, sendo possível verificar por auditoria de logs.
+
+</details>
+
+<details>
+<summary><strong>US04 — Dashboard Consolidado de Frequência (RF03)</strong></summary>
+
+## Card
+
+Como coordenador de curso, eu quero visualizar em um único painel a frequência de todos os alunos por disciplina no semestre vigente, para que eu possa identificar rapidamente quem está em risco sem precisar consultar planilhas separadas.
+
+## Conversation
+
+| Regra | Descrição |
+|---------|---------|
+| R1 | O dashboard deve refletir os dados mais recentes disponíveis após cada upload de diário. |
+| R2 | Nenhum aluno matriculado pode ficar de fora da listagem. |
+| R3 | O acesso ao dashboard é restrito ao coordenador. |
+| R4 | Esta história cobre apenas a listagem base. Os filtros avançados são tratados na US05. |
+
+## Confirmation
+
+- O dashboard lista 100% dos alunos matriculados no semestre vigente com o percentual de presença por disciplina.
+- Alunos com frequência abaixo do limiar configurado são destacados visualmente no painel.
+- O dashboard é acessível apenas pelo perfil de coordenador.
+
+</details>
+
+<details>
+<summary><strong>US05 — Filtros do Dashboard (RF03)</strong></summary>
+
+## Card
+
+Como coordenador de curso, eu quero filtrar o painel de frequência por turma, disciplina e faixa de frequência de forma combinada, para que eu possa localizar rapidamente grupos específicos de alunos em risco sem percorrer a lista completa.
+
+## Conversation
+
+| Regra | Descrição |
+|---------|---------|
+| R1 | Os filtros disponíveis são turma, disciplina e faixa de frequência. |
+| R2 | Os filtros devem funcionar de forma combinada. |
+| R3 | Esta história depende da US04, pois opera sobre a listagem base do dashboard. |
+
+## Confirmation
+
+- Os filtros de turma, disciplina e faixa de frequência funcionam de forma combinada sem erro.
+- Ao aplicar qualquer filtro, apenas os alunos que atendem aos critérios selecionados são exibidos.
+- Ao remover os filtros, a listagem completa é restaurada sem necessidade de recarregar a página.
+
+</details>
 *Documentação de diretrizes técnicas para o projeto.*

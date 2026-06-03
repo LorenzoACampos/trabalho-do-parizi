@@ -601,3 +601,164 @@ Esta seção apresenta as User Stories identificadas para a plataforma **SaveStu
 - Ao remover os filtros, a listagem completa é restaurada sem necessidade de recarregar a página.
 
 </details>
+# Cenários BDD
+
+Esta seção apresenta os cenários desenvolvidos utilizando a abordagem **Behavior Driven Development (BDD)**. Os cenários estão descritos em linguagem **Gherkin**, permitindo validar o comportamento esperado do sistema a partir das User Stories definidas anteriormente.
+
+---
+
+<details>
+<summary><strong>BDD — US01: Alerta Automático de Ausências Consecutivas (RF01)</strong></summary>
+
+### Cenário 01 — Disparo de alerta após 2ª falta consecutiva
+
+```gherkin
+Cenário: Aluno acumula duas faltas consecutivas na disciplina
+
+Dado que o aluno "Lorenzo" está ativo na disciplina "Algoritmos"
+E "Lorenzo" possui 1 falta registrada na aula anterior
+Quando o professor registrar mais 1 falta para "Lorenzo" na aula seguinte
+Então o sistema deve identificar 2 faltas consecutivas para "Lorenzo" em "Algoritmos"
+E deve enviar uma notificação ao coordenador contendo o nome "Lorenzo", a disciplina "Algoritmos" e o link direto ao perfil do aluno
+E o alerta deve aparecer destacado no dashboard do coordenador
+```
+
+### Cenário 02 — Aluno inativo não gera alerta
+
+```gherkin
+Cenário: Registro de falta para aluno com matrícula trancada
+
+Dado que o aluno "Felipe" está com matrícula com status "Trancado" na disciplina "Algoritmos"
+Quando o professor tentar registrar uma falta para "Felipe"
+Então o sistema não deve salvar o registro
+E deve exibir a mensagem "Operação inválida: aluno inativo na instituição"
+E nenhum alerta deve ser gerado para o coordenador
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>BDD — US02: Alerta Preventivo de Frequência (RF09)</strong></summary>
+
+### Cenário 01 — Disparo de alerta preventivo
+
+```gherkin
+Cenário: Frequência do aluno fica abaixo de 85%
+
+Dado que a aluna "Marina" está ativa na disciplina "Programação Orientada a Objetos" de 60 horas
+E "Marina" possui frequência atual de 86% nessa disciplina
+Quando o professor registrar mais 1 falta para "Marina"
+Então o sistema deve recalcular a frequência de "Marina" para abaixo de 85%
+E deve enviar uma notificação preventiva para "Marina" informando a disciplina e o percentual atual de frequência
+E a notificação deve informar que o limite mínimo para aprovação é 75%
+```
+
+### Cenário 02 — Não reenviar alerta preventivo já emitido
+
+```gherkin
+Cenário: Aluno já recebeu alerta preventivo anteriormente
+
+Dado que o aluno "Carlos" possui frequência de 84% na disciplina "Banco de Dados"
+E "Carlos" já recebeu o alerta preventivo anteriormente
+Quando o professor registrar mais 1 falta para "Carlos"
+Então o sistema deve atualizar o percentual de frequência de "Carlos"
+E não deve reenviar o alerta preventivo já disparado anteriormente
+E deve apenas atualizar os registros internos da frequência
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>BDD — US03: Alerta Crítico de Frequência (RF09)</strong></summary>
+
+### Cenário 01 — Disparo de alerta crítico
+
+```gherkin
+Cenário: Frequência do aluno cruza o limite de 75%
+
+Dado que o aluno "Pedro" possui frequência de 76% na disciplina "Engenharia de Software"
+Quando o professor registrar mais 1 falta para "Pedro"
+Então o sistema deve recalcular a frequência para abaixo de 75%
+E deve enviar uma notificação crítica para "Pedro"
+E deve enviar simultaneamente uma notificação ao coordenador do curso
+E a notificação deve informar o risco de reprovação por falta
+```
+
+### Cenário 02 — Conteúdo distinto do alerta preventivo
+
+```gherkin
+Cenário: Emissão de alerta crítico
+
+Dado que a frequência do aluno "João" caiu para 74% na disciplina "Banco de Dados"
+Quando o sistema gerar a notificação crítica
+Então a mensagem deve informar o risco de reprovação por falta
+E o conteúdo da mensagem deve ser diferente do alerta preventivo de frequência
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>BDD — US04: Dashboard Consolidado de Frequência (RF03)</strong></summary>
+
+### Cenário 01 — Coordenador visualiza painel consolidado
+
+```gherkin
+Cenário: Acesso ao dashboard consolidado de frequência
+
+Dado que existem alunos matriculados no semestre vigente
+E os dados de frequência foram atualizados após o último upload de diário
+Quando o coordenador acessar o dashboard de frequência
+Então o sistema deve exibir a lista de todos os alunos matriculados
+E deve apresentar o percentual de frequência de cada aluno por disciplina
+E deve destacar visualmente os alunos com frequência abaixo do limiar configurado
+```
+
+### Cenário 02 — Usuário sem permissão tenta acessar o dashboard
+
+```gherkin
+Cenário: Professor tenta acessar painel restrito ao coordenador
+
+Dado que o usuário autenticado possui perfil "Professor"
+Quando ele tentar acessar o dashboard consolidado de frequência
+Então o sistema deve negar o acesso à funcionalidade
+E deve exibir a mensagem "Acesso restrito ao coordenador do curso"
+E nenhuma informação consolidada dos alunos deve ser exibida
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>BDD — US05: Filtros do Dashboard de Frequência (RF03)</strong></summary>
+
+### Cenário 01 — Aplicação combinada de filtros
+
+```gherkin
+Cenário: Coordenador filtra alunos por turma, disciplina e frequência
+
+Dado que o dashboard apresenta os dados de frequência dos alunos
+Quando o coordenador selecionar a turma "SI 2025"
+E selecionar a disciplina "Engenharia de Software"
+E selecionar a faixa de frequência "Abaixo de 75%"
+Então o sistema deve exibir apenas os alunos que atendem a todos os critérios informados
+```
+
+### Cenário 02 — Remoção dos filtros
+
+```gherkin
+Cenário: Coordenador remove filtros aplicados
+
+Dado que existem filtros ativos no dashboard
+Quando o coordenador remover todos os filtros
+Então o sistema deve restaurar a listagem completa dos alunos
+E a atualização deve ocorrer sem necessidade de recarregar a página
+```
+
+</details>

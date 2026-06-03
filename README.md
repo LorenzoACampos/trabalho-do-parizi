@@ -447,10 +447,11 @@ Esta seção descreve as premissas técnicas, de segurança e de performance do 
 
 ---
 
+# User Stories
 <details>
 <summary><strong>US02 — Alerta Preventivo de Frequência (RF09)</strong></summary>
 
-#User Stories
+
 ## Card
 
 Como aluno, eu quero receber uma notificação automática quando minha frequência em uma disciplina cair abaixo de 85%, para que eu possa me organizar a tempo de evitar chegar ao limite mínimo de aprovação.

@@ -601,7 +601,8 @@ Esta seção apresenta as User Stories identificadas para a plataforma **SaveStu
 - Ao remover os filtros, a listagem completa é restaurada sem necessidade de recarregar a página.
 
 </details>
-# Cenários BDD
+
+# Cenários BDD (Behavior Driven Development)
 
 Esta seção apresenta os cenários desenvolvidos utilizando a abordagem **Behavior Driven Development (BDD)**. Os cenários estão descritos em linguagem **Gherkin**, permitindo validar o comportamento esperado do sistema a partir das User Stories definidas anteriormente.
 

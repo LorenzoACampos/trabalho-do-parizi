@@ -454,7 +454,7 @@ Esta seção descreve as premissas técnicas, de segurança e de performance do 
 
 ## Card
 
-Como aluno, eu quero receber uma notificação automática quando minha frequência em uma disciplina cair abaixo de 85%, para que eu possa me organizar a tempo de evitar chegar ao limite mínimo de aprovação.
+**Como** aluno, **eu quero** receber uma notificação automática quando minha frequência em uma disciplina cair abaixo de 85%, **para** que eu possa me organizar a tempo de evitar chegar ao limite mínimo de aprovação.
 
 ## Conversation
 
@@ -478,7 +478,7 @@ Como aluno, eu quero receber uma notificação automática quando minha frequên
 
 ## Card
 
-Como aluno, eu quero receber uma notificação automática quando minha frequência em uma disciplina cruzar o limite de 75%, para que eu saiba que estou em risco de reprovação direta por falta e o coordenador possa intervir.
+**Como** aluno, **eu quero** receber uma notificação automática quando minha frequência em uma disciplina cruzar o limite de 75%, **para** que eu saiba que estou em risco de reprovação direta por falta e o coordenador possa intervir.
 
 ## Conversation
 
@@ -503,7 +503,7 @@ Como aluno, eu quero receber uma notificação automática quando minha frequên
 
 ## Card
 
-Como coordenador de curso, eu quero visualizar em um único painel a frequência de todos os alunos por disciplina no semestre vigente, para que eu possa identificar rapidamente quem está em risco sem precisar consultar planilhas separadas.
+**Como** coordenador de curso, **eu quero** visualizar em um único painel a frequência de todos os alunos por disciplina no semestre vigente, **para** que eu possa identificar rapidamente quem está em risco sem precisar consultar planilhas separadas.
 
 ## Conversation
 
@@ -527,7 +527,7 @@ Como coordenador de curso, eu quero visualizar em um único painel a frequência
 
 ## Card
 
-Como coordenador de curso, eu quero filtrar o painel de frequência por turma, disciplina e faixa de frequência de forma combinada, para que eu possa localizar rapidamente grupos específicos de alunos em risco sem percorrer a lista completa.
+**Como** coordenador de curso, **eu quero** filtrar o painel de frequência por turma, disciplina e faixa de frequência de forma combinada, **para** que eu possa localizar rapidamente grupos específicos de alunos em risco sem percorrer a lista completa.
 
 ## Conversation
 

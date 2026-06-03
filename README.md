@@ -759,3 +759,17 @@ E a atualização deve ocorrer sem necessidade de recarregar a página
 ```
 
 </details>
+
+# Validação das User Stories com INVEST
+
+As User Stories da plataforma **SaveStudent** foram avaliadas utilizando o modelo **INVEST** (*Independent, Negotiable, Valuable, Estimable, Small e Testable*), garantindo que cada história seja adequada para implementação e validação durante o desenvolvimento.
+
+| Critério | US01 | US02 | US03 | US04 | US05 |
+|-----------|-----------|-----------|-----------|-----------|-----------|
+| **I — Independent** | Independente das demais. | Independente do alerta crítico (trata apenas o limiar de 85%). | Independente do alerta preventivo (trata apenas o limiar de 75%). | Independente, entrega a listagem base sem depender de outras histórias. | Pode ser implementada separadamente, embora reutilize os dados apresentados pela US04. |
+| **N — Negotiable** | Limiar de 2 faltas negociável via RF08. | Limiar de 85% configurável. | Limiar de 75% configurável. | Campos exibidos são negociáveis. | Filtros disponíveis são negociáveis. |
+| **V — Valuable** | Gatilho central da prevenção de evasão. | Dá ao aluno consciência antecipada do risco. | Garante que coordenador e aluno sejam notificados no momento crítico. | Elimina o processo manual de cruzamento de planilhas relatado pelo coordenador. | Permite localizar rapidamente grupos de risco sem percorrer toda a lista de alunos. |
+| **E — Estimable** | Regra de negócio clara e verificável. | Escopo claro: um único limiar com comportamento definido. | Escopo claro: um único limiar com comportamento definido. | Escopo claro: listagem com campos definidos. | Escopo claro: filtros combinados sobre listagem existente. |
+| **S — Small** | Foca em um único comportamento de disparo. | Trata exclusivamente o alerta de 85%. | Trata exclusivamente o alerta de 75%. | Foca exclusivamente na listagem base. | Foca exclusivamente nos filtros. |
+| **T — Testable** | Testável por auditoria de logs (0 falsos negativos). | Testável por registro de notificações enviadas ao atingir 85%. | Testável por registro de notificações enviadas ao atingir 75%. | Testável por inspeção da interface utilizando dados de teste. | Testável aplicando filtros de forma isolada e combinada. |
+

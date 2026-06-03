@@ -448,16 +448,21 @@ Esta seção descreve as premissas técnicas, de segurança e de performance do 
 ---
 
 # User Stories
+<details>
 <summary><strong>US01 — Alerta Automático de Ausências Consecutivas (RF01)</strong></summary>
 
 ## Card
 
-Como coordenador de curso, eu quero receber um alerta automático sempre que um aluno acumular 2 faltas consecutivas em uma disciplina, para que eu possa agir proativamente antes que o aluno abandone o curso.
+**Como** coordenador de curso,
+
+**Quero** receber um alerta automático sempre que um aluno acumular 2 faltas consecutivas em uma disciplina,
+
+**Para que** eu possa agir proativamente antes que o aluno abandone o curso.
 
 ## Conversation
 
 | Regra | Descrição |
-|---------|---------|
+|--------|------------|
 | R1 | O alerta deve ser disparado após o registro da 2ª falta consecutiva na mesma disciplina. |
 | R2 | Alunos com matrícula trancada ou cancelada não devem gerar alertas. |
 | R3 | O alerta deve chegar ao coordenador por e-mail e também aparecer no dashboard. |
@@ -466,11 +471,10 @@ Como coordenador de curso, eu quero receber um alerta automático sempre que um 
 ## Confirmation
 
 - O coordenador recebe uma notificação contendo nome do aluno, disciplina e link para o perfil.
-- Alunos com status Trancado ou Cancelado não geram alertas.
+- Alunos com status **Trancado** ou **Cancelado** não geram alertas.
 - Caso o professor corrija o registro e a sequência de faltas deixe de existir, o alerta é removido automaticamente do dashboard.
-<details>
-<summary><strong>US02 — Alerta Preventivo de Frequência (RF09)</strong></summary>
 
+</details>
 
 ## Card
 

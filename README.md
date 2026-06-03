@@ -475,6 +475,7 @@ Esta seção descreve as premissas técnicas, de segurança e de performance do 
 - Caso o professor corrija o registro e a sequência de faltas deixe de existir, o alerta é removido automaticamente do dashboard.
 
 </details>
+</details>
 
 ## Card
 

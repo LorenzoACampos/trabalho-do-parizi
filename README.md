@@ -448,7 +448,6 @@ Esta seção descreve as premissas técnicas, de segurança e de performance do 
 ---
 
 # User Stories
-# User Stories (Modelo 3C)
 
 Esta seção apresenta as User Stories identificadas para a plataforma **SaveStudent**. Cada história foi estruturada utilizando o modelo **3C (Card, Conversation e Confirmation)**, permitindo a descrição dos requisitos funcionais de forma clara e orientada às necessidades dos usuários do sistema.
 

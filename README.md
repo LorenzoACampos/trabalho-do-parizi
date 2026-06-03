@@ -757,7 +757,7 @@ E a atualização deve ocorrer sem necessidade de recarregar a página
 </details>
 
 
-</details>
+
 # Validação das User Stories com INVEST
 
 
@@ -772,4 +772,3 @@ E a atualização deve ocorrer sem necessidade de recarregar a página
 | **T — Testable** | Testável por auditoria de logs (0 falsos negativos). | Testável por registro de notificações enviadas ao atingir 85%. | Testável por registro de notificações enviadas ao atingir 75%. | Testável por inspeção da interface utilizando dados de teste. | Testável aplicando filtros de forma isolada e combinada. |
 
 
-</details>
